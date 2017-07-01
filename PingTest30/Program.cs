@@ -1,3 +1,7 @@
+//<<<<<<< HEAD
+//=======
+﻿//Branch update
+//>>>>>>> 7e58ceb5d52bc5a65e80963472f1bb9aec26be66
 using System;
 using System.Text;
 using System.Net;
@@ -11,9 +15,11 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 	{
 		public static void Main(string[] args)
 		{
-			if (args.Length == 0)
-				throw new ArgumentException("Ping needs a host or IP Address.");
-
+            if (args.Length == 0)
+            {
+                Console.WriteLine("Ping needs a host or IP Address.");
+                Environment.Exit(0);
+            }
 			string who = args[0];
 			AutoResetEvent waiter = new AutoResetEvent(false);
 
